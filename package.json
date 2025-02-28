@@ -1,0 +1,14 @@
+{
+    "name": "teste-performance-k6-horadoqa",
+    "version": "1.0.0",
+    "directories": {
+        "test": "tests"
+    },
+    "scripts": {
+        "log:access": "PowerShell Get-Content c:/nginx/logs/access.log -Wait",
+        "log:error": "PowerShell Get-Content c:/nginx/logs/error.log -Wait",
+        "stress": "k6 run tests/stress.js"
+    },
+    "author": "Bruno Dórea",
+    "license": "MIT"
+}
