@@ -5,9 +5,11 @@
         "test": "tests"
     },
     "scripts": {
-        "log:access": "PowerShell Get-Content c:/nginx/logs/access.log -Wait",
-        "log:error": "PowerShell Get-Content c:/nginx/logs/error.log -Wait",
-        "stress": "k6 run tests/stress.js"
+        "stress": "k6 run tests/stress.js",
+        "carga": "k6 run tests/carga.js",
+        "pico": "k6 run tests/pico.js",
+        "endurance": "k6 run tests/endurance.js",
+        "escalabilidade": "k6 run tests/escalabilidade.js"
     },
     "author": "Bruno Dórea",
     "license": "MIT"
