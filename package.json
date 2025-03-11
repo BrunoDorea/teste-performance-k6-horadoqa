@@ -1,6 +1,6 @@
 {
     "name": "teste-performance-k6-horadoqa",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "directories": {
         "test": "tests"
     },
@@ -11,8 +11,8 @@
         "endurance": "k6 run tests/endurance.js",
         "escalabilidade": "k6 run tests/escalabilidade.js",
 
-        "carga-html": "k6 run tests/carga-report.js",
-        "carga-json": "k6 run --out json=results/carga.json tests/carga-report.js",
+        "teste-html": "k6 run tests/teste.js",
+        "teste-json": "k6 run --out json=results/script.json tests/teste.js",
 
         "nginx-start": "cd c:/nginx && start /b nginx.exe",
         "nginx-reload": "cd c:/nginx && nginx.exe -s reload",
