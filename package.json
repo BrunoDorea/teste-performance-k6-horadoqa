@@ -5,6 +5,8 @@
         "test": "tests"
     },
     "scripts": {
+        "serverest-listar-todos": "k6 run tests/serverest/usuarios/listar-todos.js",
+
         "stress": "k6 run tests/stress.js",
         "carga": "k6 run tests/carga.js",
         "pico": "k6 run tests/pico.js",
