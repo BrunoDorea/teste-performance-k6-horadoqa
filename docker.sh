@@ -1,0 +1,1 @@
+docker run -d -p 3010:3000 paulogoncalvesbh/serverest:latest
