@@ -5,9 +5,9 @@
         "test": "tests"
     },
     "scripts": {
-        "serverest-listar-todos": "k6 run tests/serverest/usuarios/listar-todos.js",
+        "serverest-listar-todos": "k6 run -o influxdb=http://localhost:8086/k6 tests/serverest/usuarios/listar-todos.js",
 
-        "stress": "k6 run tests/stress.js",
+        "stress": "k6 run -o influxdb=http://localhost:8086/k6 tests/stress.js",
         "carga": "k6 run tests/carga.js",
         "pico": "k6 run tests/pico.js",
         "endurance": "k6 run tests/endurance.js",
@@ -15,6 +15,9 @@
 
         "teste-html": "k6 run tests/teste.js",
         "teste-json": "k6 run --out json=results/script.json tests/teste.js",
+
+        "docker-up": "docker-compose up -d",
+        "docker-down": "docker-compose down",
 
         "nginx-start": "cd c:/nginx && start /b nginx.exe",
         "nginx-reload": "cd c:/nginx && nginx.exe -s reload",
