@@ -6,6 +6,11 @@
     },
     "scripts": {
         "serverest": "k6 run -o influxdb=http://192.168.100.7:8086/k6 tests/serverest/usuarios/multi-scripts.js",
+
+        "serverest-constant-vus": "k6 run -o influxdb=http://192.168.100.7:8086/k6 --env SCENARIO=constant-vus tests/serverest/usuarios/multi-scripts-with-scenarios.js",
+        "serverest-constant-arrival-rate": "k6 run -o influxdb=http://192.168.100.7:8086/k6 --env SCENARIO=constant-arrival-rate tests/serverest/usuarios/multi-scripts-with-scenarios.js",
+        "serverest-ramping-vus": "k6 run -o influxdb=http://192.168.100.7:8086/k6 --env SCENARIO=ramping-vus tests/serverest/usuarios/multi-scripts-with-scenarios.js",
+
         "serverest-listar-todos": "k6 run -o influxdb=http://192.168.100.7:8086/k6 tests/serverest/usuarios/listar-todos.js",
         "serverest-listar-id": "k6 run -o influxdb=http://192.168.100.7:8086/k6 tests/serverest/usuarios/listar-id.js",
 
